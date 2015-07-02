@@ -13,7 +13,12 @@ gulp.task('html', function () {
 });
 
 gulp.task('css', function () {
-	gulp.src('./dev/sass/*.sass')
+	gulp.src('./dev/sass/**/*.sass')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./stylesheets'))
+});
+
+gulp.task('default', ['html', 'css'], function () {
+	gulp.watch('./dev/sass/**/*.sass', ['css']);
+	gulp.watch('./dev/jade/*.jade', ['html']);
 });
