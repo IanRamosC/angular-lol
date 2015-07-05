@@ -8,6 +8,7 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.html
 
 pids
 logs
@@ -17,4 +18,3 @@ npm-debug.log
 node_modules
 
 stylesheets
-index.html
