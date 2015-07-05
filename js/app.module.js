@@ -1,4 +1,4 @@
 (function() {
 	angular
-		.module('MainModule', []);
+		.module('MainModule', ['ngMaterial']);
 })();
