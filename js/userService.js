@@ -3,11 +3,15 @@
 
 var search = function ($http, $log) {
 	this.getUsers = function (data) {
+		var _nickname = data.nickname.toLowerCase().replace(/ /g, '');
 		$http.get(data.url)
 			.success(function(result) {
-				if (result.hasOwnProperty(data.nickname)) {
-					$log.info(JSON.stringify(result[data.nickname]));
+				if (result.hasOwnProperty(_nickname)) {
+					$log.info(JSON.stringify(result[_nickname]));
 				}
+			})
+			.error(function(data, status, headers, config){
+				$log.info(status);
 			});
 	};
 };
