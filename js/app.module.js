@@ -1,4 +1,5 @@
 (function() {
-	angular
-		.module('MainModule', ['ngMaterial']);
+'use strict'
+angular
+	.module('MainModule', ['ngMaterial']);
 })();
