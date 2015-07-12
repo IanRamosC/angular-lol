@@ -29,5 +29,4 @@ function getData($scope, search, $log) {
 		search.getUsers(_data);
 	};
 };
-
 })();
