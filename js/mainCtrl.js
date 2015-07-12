@@ -1,6 +1,10 @@
 (function() {
 'use strict'
-var MainCtrl = function ($scope, search, $log) {
+
+angular.module('angularLOL.controller', [])
+	.controller('getData', getData);
+
+function getData($scope, search, $log) {
 	var _apiKey = "b44b7a8c-e561-4545-a518-1d47eb608673";
 	$scope.regions = [
 		{ name: 'Brazil', abbrev:'br' },
@@ -26,7 +30,4 @@ var MainCtrl = function ($scope, search, $log) {
 	};
 };
 
-angular
-	.module('MainModule')
-	.controller('MainCtrl', ['$scope', 'search', '$log', MainCtrl]);
 })();

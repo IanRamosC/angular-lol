@@ -1,4 +1,3 @@
 (function() {
-	angular
-		.module('MainModule', ['ngMaterial']);
+	angular.module('angularLOL', ['ngMaterial', 'angularLOL.service', 'angularLOL.controller']);
 })();
